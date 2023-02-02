@@ -784,7 +784,6 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   font-weight: 300;
   align-items: center;
   min-height: 392px;
@@ -822,6 +821,10 @@ footer .footer-social-icons .footer-youtube-i {
   }
 }
 
-.copyright {
+.copyright,
+.restate {
   text-align: center;
+  width: 100%;
+  padding: 0 5%;
+  font-size: 0.95rem;
 }/*# sourceMappingURL=styles.css.map */
