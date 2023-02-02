@@ -591,7 +591,7 @@ aside img {
   font-weight: 500;
 }
 .word-wrap {
-  @media screen and (max-width: 424px) {
+  @media screen and (max-width: 554px) {
     display: flex;
     word-wrap: break-word;
     line-height: 2rem;
@@ -657,6 +657,7 @@ aside img {
     transform: scale(1.03);
   }
 }
+
 .black-sub {
   color: $almostBlack;
 }
@@ -676,6 +677,15 @@ aside img {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 80% !important;
+  }
+  @media only screen and (max-width: 425px) {
+    width: 90% !important;
+  }
+  @media only screen and (max-width: 350px) {
+    width: 100% !important;
   }
 }
 
