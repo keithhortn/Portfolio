@@ -72,6 +72,16 @@ h3 {
   display: none;
 }
 
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svg-padding-bottom {
+  padding-bottom: 0.5rem;
+}
+
 // MEDIA QUERIES
 @media only screen and (max-width: 1024px) {
   @media all {
@@ -422,9 +432,10 @@ aside img {
 .skills-container {
   display: flex;
   flex-direction: column;
-  padding: 5rem 0 7.5rem 0;
+  padding: 0rem 0 7.5rem 0;
   border-radius: 15px;
   color: $almostBlack;
+  // background-color: yellow;
 }
 .notice-sub {
   text-align: center;
@@ -446,16 +457,16 @@ aside img {
 }
 .language-box,
 .tools-box {
-  h3 {
-    color: $almostBlack;
-    text-align: left;
-    padding-left: 2rem;
-    font-weight: 300;
-  }
-  width: 398px;
+  width: 100%;
   height: 265px;
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
   border-radius: 15px;
+  h3 {
+    color: $almostBlack;
+    text-align: left;
+    padding-left: 2.5rem;
+    font-weight: 300;
+  }
   .language-targets,
   .tool-targets {
     display: flex;
@@ -490,10 +501,34 @@ aside img {
       word-break: break-all;
     }
     height: fit-content;
+    padding-bottom: 2rem !important;
   }
   @media screen and (max-width: 398px) {
     width: fit-content;
   }
+}
+
+.skills-svg-container {
+  width: 8rem;
+  height: 8rem;
+}
+
+/*
+STYLES FOR MY SKETCHBOOK SVG
+*/
+.svg-icon {
+  width: 100%;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #404040;
+}
+
+.svg-icon circle {
+  stroke: #314459;
+  stroke-width: 1;
 }
 
 // STYLES FOR PROJECTS SECTION
