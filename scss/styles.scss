@@ -427,8 +427,8 @@ aside img {
 .me-container p {
   text-align: left;
 }
-.me-highlights {
-  background-color: #314459;
+.me-underline {
+  text-decoration: underline solid 3px $almostNavy;
 }
 
 // STYLES FOR SKILLS SECTION
@@ -466,8 +466,7 @@ aside img {
   border-radius: 15px;
   h3 {
     color: $almostBlack;
-    text-align: left;
-    padding-left: 2.5rem;
+    text-align: center;
     font-weight: 300;
   }
   .language-targets,
@@ -475,7 +474,7 @@ aside img {
     display: flex;
     flex-wrap: wrap;
     padding: 0 1rem;
-    justify-content: left;
+    justify-content: center;
     @media screen and (max-width: 299px) {
       flex-direction: column;
     }
@@ -678,7 +677,9 @@ STYLES FOR MY SKETCHBOOK SVG
   border-radius: 10px;
   margin: 1rem auto 2rem auto;
 }
-
+.web-target-container {
+  margin-bottom: 20px;
+}
 .web-target {
   width: 100%;
   border-radius: 15px;
