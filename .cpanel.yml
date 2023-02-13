@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sgiik7u2bjel/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp /dist/styles.css $DEPLOYPATH
