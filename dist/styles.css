@@ -445,11 +445,6 @@ aside img {
   text-align: left;
 }
 
-.me-underline {
-  -webkit-text-decoration: underline solid 3px #314459;
-          text-decoration: underline solid 3px #314459;
-}
-
 .skills-container {
   display: flex;
   flex-direction: column;
