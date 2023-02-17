@@ -82,6 +82,10 @@ h3 {
   padding-bottom: 0.5rem;
 }
 
+.white {
+  color: $almostWhite !important;
+}
+
 // MEDIA QUERIES
 @media only screen and (max-width: 1024px) {
   @media all {
@@ -242,7 +246,7 @@ h3 {
 .the-header {
   font-size: $header1;
   text-align: center;
-  margin: 110px 0 -0.2rem 0;
+  margin: 0 0 -0.2rem 0;
   @media screen and (max-width: 820px) {
     padding: 0 1rem;
   }
@@ -259,12 +263,31 @@ h3 {
     word-break: break-all;
   }
 }
+.intro {
+  margin: 0;
+  margin: 110px 0 0 0;
+  @media only screen and (max-width: 421px) {
+    font-size: 1.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
+.period {
+  font-weight: 900;
+  font-size: 3rem;
+  color: $almostBrown;
+  @media only screen and (max-width: 421px) {
+    font-size: 1.5rem !important;
+  }
+}
 .header-container p {
   font-size: $bodyFontSize;
   text-align: center;
-  padding-bottom: 1rem;
-  @media screen and (max-width: 820px) {
-    padding: 0 1rem 1rem 1rem;
+  padding: 0 6rem 1rem 6rem;
+  @media screen and (max-width: 519px) {
+    padding: 0 4rem 1rem 4rem;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 0 2rem 1rem 2rem;
   }
 }
 .header-btn-container {
@@ -325,7 +348,7 @@ h3 {
 // }
 #me {
   width: 12rem;
-  padding-top: 1rem;
+  padding-top: 2.5rem;
   .me-moji {
     width: 100%;
     filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.3));
@@ -345,8 +368,14 @@ h3 {
   display: flex;
   justify-content: center;
   z-index: -1;
-  margin-top: -8.1rem;
-  @media screen and (max-width: 417px) {
+  margin-top: -14.15rem;
+  @media screen and (max-width: 807px) {
+    margin-top: -12rem;
+  }
+  @media screen and (max-width: 669px) {
+    margin-top: -11rem;
+  }
+  @media screen and (max-width: 603px) {
     margin-top: -8rem;
   }
 }
@@ -386,6 +415,7 @@ aside img {
   display: flex;
   padding: 6rem 0;
   margin-top: -0.2rem;
+  margin-bottom: 4rem;
   justify-content: center;
   background-color: $almostBrown;
   color: $almostWhite;
@@ -443,6 +473,7 @@ aside img {
 .notice-sub {
   text-align: center;
   font-size: 2rem;
+  color: $almostBlack;
   @media screen and (max-width: 299px) {
     word-break: break-all;
   }
@@ -513,6 +544,9 @@ aside img {
 .skills-svg-container {
   width: 8rem;
   height: 8rem;
+  @media only screen and (max-width: 543px) {
+    padding-bottom: 1rem !important;
+  }
 }
 
 /*
@@ -554,6 +588,12 @@ STYLES FOR MY SKETCHBOOK SVG
     color: $almostWhite;
     border-bottom: solid 2px $almostBrown;
     border-radius: 2px;
+  }
+  p {
+    padding: 0 1rem;
+    @media only screen and (max-width: 425px) {
+      text-align: center !important;
+    }
   }
 }
 

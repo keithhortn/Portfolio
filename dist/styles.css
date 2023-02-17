@@ -74,6 +74,10 @@ h3 {
   padding-bottom: 0.5rem;
 }
 
+.white {
+  color: #fafafa !important;
+}
+
 @media only screen and (max-width: 1024px) {
   .nav-links {
     display: none !important;
@@ -188,12 +192,7 @@ h3 {
   z-index: 2;
   width: 100%;
   background-color: hsl(0deg, 0%, 25%);
-  background-image: radial-gradient(
-      at 80% 100%,
-      hsl(212deg, 29%, 27%) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 0% 0%, hsl(26deg, 59%, 40%) 0px, transparent 50%);
+  background-image: radial-gradient(at 80% 100%, hsl(212deg, 29%, 27%) 0px, transparent 50%), radial-gradient(at 0% 0%, hsl(26deg, 59%, 40%) 0px, transparent 50%);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -239,7 +238,7 @@ h3 {
 .the-header {
   font-size: 4rem;
   text-align: center;
-  margin: 110px 0 -0.2rem 0;
+  margin: 0 0 -0.2rem 0;
 }
 @media screen and (max-width: 820px) {
   .the-header {
@@ -265,14 +264,41 @@ h3 {
   }
 }
 
+.intro {
+  margin: 0;
+  margin: 110px 0 0 0;
+}
+@media only screen and (max-width: 421px) {
+  .intro {
+    font-size: 1.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
+
+.period {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #a15d2a;
+}
+@media only screen and (max-width: 421px) {
+  .period {
+    font-size: 1.5rem !important;
+  }
+}
+
 .header-container p {
   font-size: 1.13rem;
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 0 6rem 1rem 6rem;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 519px) {
   .header-container p {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 4rem 1rem 4rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header-container p {
+    padding: 0 2rem 1rem 2rem;
   }
 }
 
@@ -324,7 +350,7 @@ h3 {
 
 #me {
   width: 12rem;
-  padding-top: 1rem;
+  padding-top: 2.5rem;
 }
 #me .me-moji {
   width: 100%;
@@ -348,9 +374,19 @@ h3 {
   display: flex;
   justify-content: center;
   z-index: -1;
-  margin-top: -8.1rem;
+  margin-top: -14.15rem;
 }
-@media screen and (max-width: 417px) {
+@media screen and (max-width: 807px) {
+  .devices-container {
+    margin-top: -12rem;
+  }
+}
+@media screen and (max-width: 669px) {
+  .devices-container {
+    margin-top: -11rem;
+  }
+}
+@media screen and (max-width: 603px) {
   .devices-container {
     margin-top: -8rem;
   }
@@ -391,6 +427,7 @@ aside img {
   display: flex;
   padding: 6rem 0;
   margin-top: -0.2rem;
+  margin-bottom: 4rem;
   justify-content: center;
   background-color: #a15d2a;
   color: #fafafa;
@@ -410,7 +447,7 @@ aside img {
 
 .me-underline {
   -webkit-text-decoration: underline solid 3px #314459;
-  text-decoration: underline solid 3px #314459;
+          text-decoration: underline solid 3px #314459;
 }
 
 .skills-container {
@@ -424,6 +461,7 @@ aside img {
 .notice-sub {
   text-align: center;
   font-size: 2rem;
+  color: #404040;
 }
 @media screen and (max-width: 299px) {
   .notice-sub {
@@ -526,6 +564,11 @@ aside img {
   width: 8rem;
   height: 8rem;
 }
+@media only screen and (max-width: 543px) {
+  .skills-svg-container {
+    padding-bottom: 1rem !important;
+  }
+}
 
 /*
 STYLES FOR MY SKETCHBOOK SVG
@@ -567,6 +610,14 @@ STYLES FOR MY SKETCHBOOK SVG
   border-bottom: solid 2px #a15d2a;
   border-radius: 2px;
 }
+.projects-intro-container p {
+  padding: 0 1rem;
+}
+@media only screen and (max-width: 425px) {
+  .projects-intro-container p {
+    text-align: center !important;
+  }
+}
 
 .dev-container {
   background-color: rgba(162, 162, 162, 0.2196078431);
@@ -599,12 +650,9 @@ STYLES FOR MY SKETCHBOOK SVG
   margin-bottom: 1rem;
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
   transition: all 0.3s ease;
-  -webkit-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out,
-    transform 0.5s 0s ease;
-  -moz-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out,
-    transform 0.5s 0s ease;
-  -o-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out,
-    transform 0.5s 0s ease;
+  -webkit-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out, transform 0.5s 0s ease;
+  -moz-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out, transform 0.5s 0s ease;
+  -o-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out, transform 0.5s 0s ease;
 }
 @media screen and (max-width: 348px) {
   .dev-container .email-target {
@@ -706,12 +754,9 @@ STYLES FOR MY SKETCHBOOK SVG
   border-radius: 15px;
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
   transition: all 0.3s ease;
-  -webkit-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out,
-    transform 0.5s 0s ease;
-  -moz-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out,
-    transform 0.5s 0s ease;
-  -o-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out,
-    transform 0.5s 0s ease;
+  -webkit-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out, transform 0.5s 0s ease;
+  -moz-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out, transform 0.5s 0s ease;
+  -o-transition: filter 0.5s 0s ease-in-out background 0.5s 0s ease-in-out, transform 0.5s 0s ease;
 }
 .web-target:hover {
   transform: scale(1.03);
@@ -878,4 +923,4 @@ footer .footer-social-icons .footer-youtube-i {
   width: 100%;
   padding: 0 5%;
   font-size: 0.95rem;
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
