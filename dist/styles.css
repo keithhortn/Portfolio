@@ -523,6 +523,14 @@ nav {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 425px) {
+  .down-container {
+    display: none;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+  }
+}
 
 .down-svg {
   position: relative;
