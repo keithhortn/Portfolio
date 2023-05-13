@@ -12,7 +12,7 @@ $header2: 4.5rem;
 $header3: 2.5rem;
 $header4: 1.75rem;
 $bodyFontSize: 1.2rem;
-$bodyMobile: 0.88rem;
+$bodyMobile: 1rem;
 $smallFontSize: 1rem;
 
 html {
@@ -478,9 +478,9 @@ nav {
 
 .jd p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: $bodyFontSize;
   @media only screen and (max-width: 425px) {
-    font-size: inherit;
+    font-size: $bodyMobile;
   }
 }
 
@@ -491,6 +491,12 @@ nav {
   margin: 1.25rem 0 0 0;
   @media only screen and (max-width: 320px) {
     justify-content: center;
+  }
+}
+
+.vp-container a {
+  @media only screen and (max-width: 425px) {
+    font-size: $bodyMobile;
   }
 }
 
@@ -744,7 +750,9 @@ nav {
 }
 
 .stay-top {
-  margin-top: 0;
+  @media only screen and (max-width: 425px) {
+    font-size: $bodyMobile;
+  }
 }
 
 .bl-about {
@@ -793,8 +801,14 @@ nav {
   justify-content: left;
   align-items: center;
   padding-top: 2rem;
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 425px) {
     justify-content: center;
+  }
+}
+
+.hm-btn-container p {
+  @media only screen and (max-width: 425px) {
+    font-size: $bodyMobile;
   }
 }
 
@@ -961,6 +975,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lt-name {
+  @media only screen and (max-width: 425px) {
+    font-size: $bodyMobile;
+  }
 }
 
 // Styles for My Work Section
@@ -1275,6 +1295,9 @@ nav {
   padding: 1rem 0;
   p {
     text-align: center;
+    @media only screen and (max-width: 425px) {
+      font-size: $bodyMobile;
+    }
   }
 }
 
@@ -1301,6 +1324,9 @@ nav {
   align-items: center;
   border-radius: 10px;
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
+  @media only screen and (max-width: 425px) {
+    font-size: $bodyMobile;
+  }
 }
 
 // Styles for Footer
@@ -1321,6 +1347,9 @@ footer {
   margin: 25px 0 0 0;
   p {
     text-align: center;
+    @media only screen and (max-width: 425px) {
+      font-size: $bodyMobile;
+    }
   }
 }
 

@@ -473,11 +473,11 @@ nav {
 
 .jd p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 @media only screen and (max-width: 425px) {
   .jd p {
-    font-size: inherit;
+    font-size: 1rem;
   }
 }
 
@@ -490,6 +490,12 @@ nav {
 @media only screen and (max-width: 320px) {
   .vp-container {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .vp-container a {
+    font-size: 1rem;
   }
 }
 
@@ -712,8 +718,10 @@ nav {
   }
 }
 
-.stay-top {
-  margin-top: 0;
+@media only screen and (max-width: 425px) {
+  .stay-top {
+    font-size: 1rem;
+  }
 }
 
 .bl-about {
@@ -776,9 +784,15 @@ nav {
   align-items: center;
   padding-top: 2rem;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
   .hm-btn-container {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .hm-btn-container p {
+    font-size: 1rem;
   }
 }
 
@@ -962,6 +976,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 425px) {
+  .lt-name {
+    font-size: 1rem;
+  }
 }
 
 .work {
@@ -1286,6 +1306,11 @@ nav {
 .lwt-message-container p {
   text-align: center;
 }
+@media only screen and (max-width: 425px) {
+  .lwt-message-container p {
+    font-size: 1rem;
+  }
+}
 
 #together {
   -webkit-text-decoration: underline solid 5px #42acc7;
@@ -1311,6 +1336,11 @@ nav {
   border-radius: 10px;
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
 }
+@media only screen and (max-width: 425px) {
+  .in-touch-target {
+    font-size: 1rem;
+  }
+}
 
 footer {
   width: 100%;
@@ -1330,6 +1360,11 @@ footer {
 }
 .f-copyright-container p {
   text-align: center;
+}
+@media only screen and (max-width: 425px) {
+  .f-copyright-container p {
+    font-size: 1rem;
+  }
 }
 
 /* Media Queries */
