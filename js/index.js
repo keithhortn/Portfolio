@@ -1,29 +1,14 @@
-"use strict";
-
-// Get elements from DOM
-// Move head based on the position of mouse move
-// const body = document.querySelector("body");
-// const myHead = document.querySelector(".me-moji");
-
-// myHead.style.backgroundColor = "lightblue";
-
-// body.addEventListener("mousemove", moveHead);
-
-// function moveHead(e) {
-//   let top = e.offsetY;
-//   let left = e.offsetX;
-//   myHead.style.position = "relative";
-
-//   myHead.style.top = `%${top}`;
-//   myHead.style.left = `%${left}`;
-// }
-
-// Side Navigation Code
+// Get Elements from DOM
 const hamburger = document.querySelector(".hamburger-container");
 const sideNav = document.querySelector(".ham-nav-container");
 const exitBtn = document.querySelector(".exit-btn");
 const body = document.querySelector("body");
 const hamLinks = document.querySelectorAll(".ham-link");
+const projects = document.querySelectorAll(".project");
+const modalOverlay = document.querySelector(".work-modal-overlay");
+const innerModal = document.querySelector(".inner-modal");
+const modalExit = document.querySelector(".wm-exit");
+const nav = document.querySelector("header");
 
 // Open side navigation
 hamburger.addEventListener("click", openSideNav);
@@ -34,9 +19,9 @@ function openSideNav(e) {
   }
 }
 
-// cCose side navigation
+// Close side navigation
 exitBtn.addEventListener("click", closeSideNav);
-function closeSideNav(e) {
+function closeSideNav() {
   sideNav.classList.add("hidden");
   body.classList.remove("stop-scrolling");
 }
@@ -48,3 +33,16 @@ for (let i = 0; i < hamLinks.length; i++) {
     body.classList.remove("stop-scrolling");
   });
 }
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+let lastScrollTop;
+navbar = document.getElementById("navbar");
+window.addEventListener("scroll", function () {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    nav.style.top = "-6em";
+  } else {
+    nav.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+});

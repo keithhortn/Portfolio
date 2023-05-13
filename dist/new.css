@@ -1,20 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-// set variables
-$almostBlack: #404040;
-$almostWhite: #f7f7f7;
-$almostBrown: #a15d2a;
-$blueish: #42acc7;
-$mainBackColor: #eaeaea;
-
-$header1: 6.5rem;
-$header2: 4.5rem;
-$header3: 2.5rem;
-$header4: 1.75rem;
-$bodyFontSize: 1.2rem;
-$bodyMobile: 0.88rem;
-$smallFontSize: 1rem;
-
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -30,11 +14,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background: $mainBackColor;
+  background: #eaeaea;
 }
 
 .main-border {
-  border: solid 18px $almostWhite !important;
+  border: solid 18px #f7f7f7 !important;
   height: 100%;
 }
 
@@ -44,7 +28,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 2;
-  border-top: solid 18px $almostWhite !important;
+  border-top: solid 18px #f7f7f7 !important;
 }
 
 .bor-bot {
@@ -52,7 +36,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  border-bottom: solid 18px $almostWhite !important;
+  border-bottom: solid 18px #f7f7f7 !important;
 }
 
 .stop-scrolling {
@@ -65,32 +49,32 @@ a {
 }
 
 p {
-  font-size: $bodyFontSize;
+  font-size: 1rem;
 }
 
 h1 {
-  color: $almostBlack;
-  font-size: $header1;
+  color: #404040;
+  font-size: 6.5rem;
   padding: none;
   margin: 0;
 }
 
 h2 {
-  color: $almostBlack;
-  font-size: $header2;
+  color: #404040;
+  font-size: 4.5rem;
   padding: none;
   margin: 0;
 }
 
 h3 {
-  color: $almostBlack;
-  font-size: $header3;
+  color: #404040;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
 h4 {
-  color: $almostBlack;
-  font-size: $header4;
+  color: #404040;
+  font-size: 1.75rem;
   font-weight: 400;
   padding: 2rem 0 0 0;
   margin: 0;
@@ -129,11 +113,11 @@ h4 {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $almostWhite;
+  background-color: #f7f7f7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $blueish;
+  background-color: #42acc7;
   border-radius: 10px;
 }
 
@@ -146,54 +130,59 @@ h4 {
   left: 0;
   z-index: 11;
   width: 100%;
-  background-color: $mainBackColor;
-  background-image: radial-gradient(
-      at 80% 100%,
-      $mainBackColor 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 0% 0%, $blueish 0px, transparent 50%);
+  background-color: #eaeaea;
+  background-image: radial-gradient(at 80% 100%, #eaeaea 0px, transparent 50%), radial-gradient(at 0% 0%, #42acc7 0px, transparent 50%);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .ham-link-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: right;
-    word-break: break-all;
-    padding: 2rem 0 8rem 0;
-    height: 100vh;
-    width: 90%;
-    font-size: 10vh;
-    font-weight: 600;
-    a {
-      color: $almostBlack;
-      text-decoration: none;
-      @media only screen and (max-width: 478px) {
-        font-size: 5rem;
-      }
-      @media only screen and (max-width: 375px) {
-        font-size: 4.5rem;
-      }
-      @media only screen and (max-width: 330px) {
-        font-size: 20vw;
-      }
-      @media only screen and (max-width: 230px) {
-        font-size: 25vw;
-      }
-      @media only screen and (max-width: 180px) {
-        font-size: 32vw;
-      }
-    }
+}
+.ham-nav-container .ham-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: right;
+  word-break: break-all;
+  padding: 2rem 0 8rem 0;
+  height: 100vh;
+  width: 90%;
+  font-size: 10vh;
+  font-weight: 600;
+}
+.ham-nav-container .ham-link-container a {
+  color: #404040;
+  text-decoration: none;
+}
+@media only screen and (max-width: 478px) {
+  .ham-nav-container .ham-link-container a {
+    font-size: 5rem;
   }
-  .exit-btn {
-    color: $blueish !important;
-    filter: drop-shadow(0px 5px 9px rgba(240, 240, 240, 0.158));
-    cursor: pointer;
+}
+@media only screen and (max-width: 375px) {
+  .ham-nav-container .ham-link-container a {
+    font-size: 4.5rem;
   }
+}
+@media only screen and (max-width: 330px) {
+  .ham-nav-container .ham-link-container a {
+    font-size: 20vw;
+  }
+}
+@media only screen and (max-width: 230px) {
+  .ham-nav-container .ham-link-container a {
+    font-size: 25vw;
+  }
+}
+@media only screen and (max-width: 180px) {
+  .ham-nav-container .ham-link-container a {
+    font-size: 32vw;
+  }
+}
+.ham-nav-container .exit-btn {
+  color: #42acc7 !important;
+  filter: drop-shadow(0px 5px 9px rgba(240, 240, 240, 0.158));
+  cursor: pointer;
 }
 
 /* Add a dark overlay when the menu is active */
@@ -208,7 +197,6 @@ h4 {
   z-index: 10;
 }
 
-// Banner Background Styles
 .banner-bg {
   position: absolute;
   left: 0;
@@ -220,17 +208,13 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  // background: linear-gradient(to right, $mainBackColor, $almostBrown);
-  // opacity: calc(50%);
 }
 
-// Main Wrapper Styles
 .main-wrapper {
   max-width: 1066px;
   margin: 0 auto;
 }
 
-// Navigation Styles
 header {
   margin: 25px 0 30px 0;
   position: fixed;
@@ -243,12 +227,13 @@ header {
   transition: all 300ms ease;
   z-index: 10;
 }
+
 nav {
   width: 85%;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
-  background: $almostWhite;
+  background: #f7f7f7;
   filter: drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.05));
   border-radius: 61px;
   animation: fade 0.8s ease normal forwards;
@@ -258,13 +243,12 @@ nav {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 .left-nav {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   justify-content: space-between;
@@ -278,7 +262,7 @@ nav {
 }
 
 .logo-container {
-  height: 68px; // remove later
+  height: 68px;
   width: 68px;
   display: flex;
   justify-content: center;
@@ -315,11 +299,11 @@ nav {
 }
 
 .nav-link {
-  color: $almostBlack;
+  color: #404040;
   font-weight: 500;
-  &:hover {
-    color: $almostBrown;
-  }
+}
+.nav-link:hover {
+  color: #a15d2a;
 }
 
 .hamburger-container {
@@ -327,15 +311,15 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  .hb-link {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hb-target {
-    width: 50%;
-  }
+}
+.hamburger-container .hb-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger-container .hb-target {
+  width: 50%;
 }
 
 .abs-hamburger-container {
@@ -346,18 +330,17 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  .hb-link {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hb-target {
-    width: 50%;
-  }
+}
+.abs-hamburger-container .hb-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.abs-hamburger-container .hb-target {
+  width: 50%;
 }
 
-// Banner / Hero Area Styles
 .banner-container {
   width: 100%;
   display: flex;
@@ -365,7 +348,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 372px;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .banner-container {
     margin-bottom: 0;
   }
 }
@@ -395,41 +380,37 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   padding: 0 1rem;
   margin-top: 8rem;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .developer-container {
     margin-top: 0;
     height: 100vh;
   }
-  // @media only screen and (max-width: 375px) {
-  //   margin-top: 3rem;
-  // }
 }
 
 .me-name {
-  margin: 0 0 0.5rem;
+  margin: 0;
   padding: 0;
 }
 
-.huge {
-  font-size: 7.5rem !important;
-}
-
 .me-name h1 {
-  text-align: center;
+  text-align: left;
   line-height: 0.9;
   margin-bottom: 0.5rem;
   letter-spacing: -0.03em;
-  @media only screen and (max-width: 1024px) {
-    font-size: 10vw !important;
+}
+@media only screen and (max-width: 886px) {
+  .me-name h1 {
+    font-size: 10vw;
   }
 }
 
 .developer {
-  letter-spacing: -0.3rem !important;
-  color: $blueish;
-  font-weight: 900 !important;
+  color: #42acc7;
+  font-weight: 500;
   animation: devAnm 1s ease 0s 1 normal forwards;
 }
 
@@ -438,67 +419,86 @@ nav {
     opacity: 0;
     transform: translateX(-250px);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 .developer h1 {
+  font-weight: 500;
   letter-spacing: -0.03em;
-  color: $blueish;
+  color: #42acc7;
   line-height: 0.75;
   margin-bottom: 1.25rem;
-
-  @media only screen and (max-width: 866px) {
+}
+@media only screen and (max-width: 866px) {
+  .developer h1 {
     font-size: 10vw;
   }
-  @media only screen and (max-width: 682px) {
+}
+@media only screen and (max-width: 682px) {
+  .developer h1 {
     font-size: 4rem;
   }
-  @media only screen and (max-width: 559px) {
+}
+@media only screen and (max-width: 559px) {
+  .developer h1 {
     font-size: 3rem;
   }
-  @media only screen and (max-width: 437px) {
+}
+@media only screen and (max-width: 437px) {
+  .developer h1 {
     font-size: 2rem;
   }
 }
 
 .jd {
-  width: 70%;
+  width: 50%;
   padding: 0;
   margin: 0;
-  @media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 1024px) {
+  .jd {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .jd {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .jd {
     width: 90%;
   }
-  @media only screen and (max-width: 375px) {
+}
+@media only screen and (max-width: 375px) {
+  .jd {
     width: 100%;
   }
 }
 
 .jd p {
-  text-align: center;
-  font-size: 1.5rem;
-  @media only screen and (max-width: 425px) {
-    font-size: inherit;
-  }
+  text-align: left;
+  font-size: 1.1rem !important;
 }
 
 .vp-container {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 1.25rem 0 0 0;
-  @media only screen and (max-width: 320px) {
+  justify-content: left;
+  margin: 14px 0 0 0;
+}
+@media only screen and (max-width: 320px) {
+  .vp-container {
     justify-content: center;
   }
 }
 
 .vp-target {
-  background: $blueish;
-  color: $almostWhite;
-  font-size: $bodyFontSize;
+  background: #42acc7;
+  color: #f7f7f7;
+  font-size: 1rem;
   max-width: 186px;
   width: 100%;
   height: 47px;
@@ -509,11 +509,39 @@ nav {
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
 }
 
-.btn-animation {
-  &:hover {
-    background: $almostBrown;
-    transition: all 0.2s ease-in-out;
+.spec-btn {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .spec-btn {
+    display: block;
+    font-size: 10vh;
+    color: #42acc7 !important;
   }
+}
+
+.rsm-btn {
+  margin-left: 2.5rem;
+  background-color: #404040;
+}
+@media only screen and (max-width: 768px) {
+  .rsm-btn {
+    visibility: hidden;
+    display: none;
+    width: 0;
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.rsm-btn-animation:hover {
+  background: #a15d2a;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-animation:hover {
+  background: #a15d2a;
+  transition: all 0.2s ease-in-out;
 }
 
 .down-container {
@@ -526,12 +554,14 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  // @media only screen and (max-width: 768px) {
-  //   display: none;
-  //   opacity: 0;
-  //   width: 0;
-  //   visibility: hidden;
-  // }
+}
+@media only screen and (max-width: 768px) {
+  .down-container {
+    display: none;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+  }
 }
 
 .down-svg {
@@ -539,63 +569,28 @@ nav {
 }
 
 .down-anm {
-  -webkit-animation: down-anm 1.5s linear infinite both;
   animation: down-anm 1.5s linear infinite both;
-}
-
-@-webkit-keyframes down-anm {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
 }
 @keyframes down-anm {
   0% {
-    -webkit-transform: translate(0);
     transform: translate(0);
   }
   20% {
-    -webkit-transform: translate(-2px, 2px);
     transform: translate(-2px, 2px);
   }
   40% {
-    -webkit-transform: translate(-2px, -2px);
     transform: translate(-2px, -2px);
   }
   60% {
-    -webkit-transform: translate(2px, 2px);
     transform: translate(2px, 2px);
   }
   80% {
-    -webkit-transform: translate(2px, -2px);
     transform: translate(2px, -2px);
   }
   100% {
-    -webkit-transform: translate(0);
     transform: translate(0);
   }
 }
-
 .bc-outer-left-container {
   width: 100%;
   display: flex;
@@ -616,7 +611,6 @@ nav {
   transform: rotate(180deg);
 }
 
-// Styles for social container
 .social-container {
   position: fixed;
   bottom: 18px;
@@ -648,10 +642,9 @@ nav {
   width: 2px;
   height: 130px;
   border-radius: 50px;
-  background: $blueish;
+  background: #42acc7;
 }
 
-// Styles for Section Divider
 .divider-container {
   width: 100%;
   display: flex;
@@ -675,12 +668,13 @@ nav {
   align-items: center;
 }
 
-// Styles for About Me Section
 .me-container {
   width: 100%;
   padding: 0 1rem;
   margin-bottom: 372px;
-  @media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 425px) {
+  .me-container {
     margin-bottom: 12rem;
   }
 }
@@ -688,11 +682,11 @@ nav {
 .me-top-container {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: start;
   width: 100%;
-  @media only screen and (max-width: 333px) {
-    // flex-direction: column;
+}
+@media only screen and (max-width: 333px) {
+  .me-top-container {
     justify-content: center;
     align-items: start;
   }
@@ -700,29 +694,31 @@ nav {
 
 .me-top-container h2 {
   width: 100%;
-  // text-align: center;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .me-top-container h2 {
     font-size: 3.5rem;
   }
-  @media only screen and (max-width: 540px) {
+}
+@media only screen and (max-width: 540px) {
+  .me-top-container h2 {
     font-size: 3rem;
   }
-  @media only screen and (max-width: 472px) {
+}
+@media only screen and (max-width: 472px) {
+  .me-top-container h2 {
     font-size: 2.5rem;
   }
-  @media only screen and (max-width: 402px) {
+}
+@media only screen and (max-width: 402px) {
+  .me-top-container h2 {
     font-size: 2rem;
   }
-  @media only screen and (max-width: 346px) {
+}
+@media only screen and (max-width: 346px) {
+  .me-top-container h2 {
     font-size: 9vw;
   }
-  // @media only screen and (max-width: 375px) {
-  //   font-size: 2rem;
-  // }
-  // @media only screen and (max-width: 333px) {
-  //   font-size: 1.8rem;
-  //   text-align: center;
-  // }
 }
 
 .me-bottom-container {
@@ -730,7 +726,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .me-bottom-container {
     flex-direction: column;
   }
 }
@@ -738,7 +736,9 @@ nav {
 .me-left-container {
   width: 90%;
   padding: 1.5rem;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .me-left-container {
     width: 100%;
     padding: 1.5rem 0;
   }
@@ -749,40 +749,53 @@ nav {
 }
 
 .bl-about {
-  color: $blueish;
+  color: #42acc7;
   font-weight: 700;
 }
 
 .inner-bottom {
-  // position: relative;
   height: 1rem;
   width: 57%;
   padding: 0;
-  margin-bottom: 2rem;
-  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
   z-index: -1;
-  background-color: $almostWhite;
+  background-color: #f7f7f7;
   border-radius: 5px;
-  @media only screen and (max-width: 964px) {
+}
+@media only screen and (max-width: 964px) {
+  .inner-bottom {
     width: 68%;
   }
-  @media only screen and (max-width: 878px) {
+}
+@media only screen and (max-width: 878px) {
+  .inner-bottom {
     width: 78%;
   }
-  @media only screen and (max-width: 770px) {
+}
+@media only screen and (max-width: 770px) {
+  .inner-bottom {
     width: 86%;
   }
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .inner-bottom {
     width: 66%;
   }
-  @media only screen and (max-width: 730px) {
+}
+@media only screen and (max-width: 730px) {
+  .inner-bottom {
     width: 76%;
   }
-  @media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 425px) {
+  .inner-bottom {
     width: 90%;
   }
-  @media only screen and (max-width: 333px) {
-    background-color: $almostWhite;
+}
+@media only screen and (max-width: 333px) {
+  .inner-bottom {
+    background-color: #f7f7f7;
     align-self: center;
     width: 90%;
   }
@@ -794,15 +807,17 @@ nav {
   justify-content: left;
   align-items: center;
   padding-top: 2rem;
-  @media only screen and (max-width: 320px) {
+}
+@media only screen and (max-width: 320px) {
+  .hm-btn-container {
     justify-content: center;
   }
 }
 
 .hm-btn-target {
-  background: $blueish;
-  color: $almostWhite;
-  font-size: $bodyFontSize;
+  background: #42acc7;
+  color: #f7f7f7;
+  font-size: 1rem;
   max-width: 186px;
   width: 100%;
   height: 47px;
@@ -834,19 +849,20 @@ nav {
   width: 50%;
   border-radius: 10px;
   padding: 1.5rem 1.5rem 0 0;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .me-right-container {
     width: 100%;
     padding: 3rem 0 1rem 0;
   }
 }
 
-.me-right {
-  @media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {
+  .me-right {
     width: 100%;
   }
 }
 
-// Styles for 2nd Section Divider
 .divider-right-container {
   width: 100%;
   display: flex;
@@ -855,12 +871,13 @@ nav {
   margin-bottom: 186px;
 }
 
-// Styles for Technologies Section
 .tech-container {
   width: 100%;
   padding: 0 1rem;
   margin-bottom: 372px;
-  @media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 425px) {
+  .tech-container {
     margin-bottom: 12rem;
   }
 }
@@ -875,20 +892,29 @@ nav {
 
 .tech-header-right h2 {
   width: 100%;
-  // background-color: yellow;
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .tech-header-right h2 {
     font-size: 3.5rem;
   }
-  @media only screen and (max-width: 540px) {
+}
+@media only screen and (max-width: 540px) {
+  .tech-header-right h2 {
     font-size: 3rem;
   }
-  @media only screen and (max-width: 472px) {
+}
+@media only screen and (max-width: 472px) {
+  .tech-header-right h2 {
     font-size: 2.5rem;
   }
-  @media only screen and (max-width: 402px) {
+}
+@media only screen and (max-width: 402px) {
+  .tech-header-right h2 {
     font-size: 2rem;
   }
-  @media only screen and (max-width: 346px) {
+}
+@media only screen and (max-width: 346px) {
+  .tech-header-right h2 {
     font-size: 9vw;
   }
 }
@@ -920,10 +946,14 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  @media only screen and (max-width: 962px) {
+}
+@media only screen and (max-width: 962px) {
+  .tech-targets-container {
     max-width: 80%;
   }
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .tech-targets-container {
     max-width: 100%;
   }
 }
@@ -944,6 +974,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .svg-container svg {
   width: 50%;
 }
@@ -952,6 +983,7 @@ nav {
   width: 50%;
   filter: saturate(0);
 }
+
 .hs-img {
   width: 50%;
   border-radius: 2px;
@@ -964,13 +996,11 @@ nav {
   align-items: center;
 }
 
-// Styles for My Work Section
 .work {
   margin-bottom: 186px;
   padding: 0 1rem;
 }
 
-// Work modal styles
 .work-modal-overlay {
   position: fixed;
   top: 0;
@@ -993,28 +1023,36 @@ nav {
   border-radius: 10px;
   padding: 2rem;
   z-index: 50;
-  background-color: $almostWhite;
+  background-color: #f7f7f7;
 }
 
 .work-header {
   width: 100%;
   padding-bottom: 3rem;
-  h2 {
-    @media only screen and (max-width: 768px) {
-      font-size: 3.5rem;
-    }
-    @media only screen and (max-width: 540px) {
-      font-size: 3rem;
-    }
-    @media only screen and (max-width: 472px) {
-      font-size: 2.5rem;
-    }
-    @media only screen and (max-width: 402px) {
-      font-size: 2rem;
-    }
-    @media only screen and (max-width: 346px) {
-      font-size: 9vw;
-    }
+}
+@media only screen and (max-width: 768px) {
+  .work-header h2 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .work-header h2 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 472px) {
+  .work-header h2 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 402px) {
+  .work-header h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 346px) {
+  .work-header h2 {
+    font-size: 9vw;
   }
 }
 
@@ -1025,12 +1063,12 @@ nav {
   font-size: 3rem;
   width: 3rem;
   height: 3rem;
-  a {
-    text-decoration: none;
-    color: $blueish;
-    font-weight: 700;
-    cursor: pointer;
-  }
+}
+.wm-exit a {
+  text-decoration: none;
+  color: #42acc7;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .wm-header {
@@ -1038,10 +1076,10 @@ nav {
   justify-content: space-between;
   align-items: start;
   width: 100%;
-  h3 {
-    margin: 0;
-    padding: 0;
-  }
+}
+.wm-header h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .wm-subheader {
@@ -1068,9 +1106,6 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  // height: 500px; // remove later
-  // background-color: $almostBlack;
-  // overflow: hidden;
 }
 
 .wm-image-link {
@@ -1090,7 +1125,6 @@ nav {
   justify-content: center;
   align-items: start;
   width: 100%;
-  // padding: 1rem 0;
 }
 
 .wm-tools {
@@ -1120,9 +1154,9 @@ nav {
 }
 
 .wm-source {
-  background: $almostBlack;
-  color: $almostWhite;
-  font-size: $bodyFontSize;
+  background: #404040;
+  color: #f7f7f7;
+  font-size: 1rem;
   max-width: 186px;
   width: 100%;
   height: 47px;
@@ -1134,9 +1168,9 @@ nav {
 }
 
 .wm-live {
-  background: $blueish;
-  color: $almostWhite;
-  font-size: $bodyFontSize;
+  background: #42acc7;
+  color: #f7f7f7;
+  font-size: 1rem;
   max-width: 186px;
   width: 100%;
   height: 47px;
@@ -1149,10 +1183,11 @@ nav {
 }
 
 .work-subheader {
+  width: -moz-fit-content;
   width: fit-content;
-  h3 {
-    font-weight: 300 !important;
-  }
+}
+.work-subheader h3 {
+  font-weight: 300 !important;
 }
 
 .ed-container {
@@ -1160,11 +1195,15 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
-  @media only screen and (max-width: 918px) {
+}
+@media only screen and (max-width: 918px) {
+  .ed-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
   }
-  @media only screen and (max-width: 702px) {
+}
+@media only screen and (max-width: 702px) {
+  .ed-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
@@ -1176,7 +1215,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // filter: drop-shadow(0px 5px 18px rgba(0, 0, 0, 0.07));
 }
 
 .ed-target-link {
@@ -1197,7 +1235,6 @@ nav {
   border-radius: 10px;
 }
 
-// Styles for Web Development Section
 .wd-container {
   width: 100%;
   display: grid;
@@ -1227,7 +1264,6 @@ nav {
   border-radius: 10px;
 }
 
-// Styles for Let's Work Together Section
 .lwt-container {
   width: 100%;
   margin-bottom: 186px;
@@ -1256,14 +1292,18 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  h3 {
-    text-align: center;
-    @media only screen and (max-width: 480px) {
-      font-size: 2rem;
-    }
-    @media only screen and (max-width: 392px) {
-      font-size: 1.5rem;
-    }
+}
+.lwt-header-container h3 {
+  text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .lwt-header-container h3 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 392px) {
+  .lwt-header-container h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -1274,26 +1314,26 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
-  p {
-    text-align: center;
-  }
+}
+.lwt-message-container p {
+  text-align: center;
 }
 
 #together {
-  text-decoration: underline solid 5px $blueish;
+  -webkit-text-decoration: underline solid 5px #42acc7;
+          text-decoration: underline solid 5px #42acc7;
 }
 
 .in-touch-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  // margin: 25px 0 0 0;
 }
 
 .in-touch-target {
-  background: $blueish;
-  color: $almostWhite;
-  font-size: $bodyFontSize;
+  background: #42acc7;
+  color: #f7f7f7;
+  font-size: 1rem;
   max-width: 186px;
   width: 100%;
   height: 47px;
@@ -1304,7 +1344,6 @@ nav {
   filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.14));
 }
 
-// Styles for Footer
 footer {
   width: 100%;
   display: flex;
@@ -1320,13 +1359,12 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 25px 0 0 0;
-  p {
-    text-align: center;
-  }
+}
+.f-copyright-container p {
+  text-align: center;
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 1302px) {
   .social-container {
     display: none;
@@ -1335,11 +1373,6 @@ footer {
     opacity: 0;
   }
 }
-
-// Media Queries for Laptop View
-@media only screen and (max-width: 1024px) {
-}
-// Media Queries for Tablet View
 @media only screen and (max-width: 768px) {
   .nav-links {
     display: none;
@@ -1349,10 +1382,8 @@ footer {
   }
   .middle-nav {
     justify-content: right;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: 1.1rem;
   }
-}
-// Media Queries for Mobile View
-@media only screen and (max-width: 425px) {
-}
+}/*# sourceMappingURL=new.css.map */
